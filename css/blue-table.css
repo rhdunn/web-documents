@@ -1,0 +1,46 @@
+/* Blue Table
+ *
+ * Copyright (C) 2009 Reece H. Dunn [mailto:msclrhd@gmail.com]
+ *
+ * Released under the Creative Commons Attribution-Share Alike 2.0 UK: England
+ * & Wales Licence [http://creativecommons.org/licenses/by-sa/2.0/uk/].
+ *
+ * The idea behind this stylesheet is to create a blue-coloured table.
+ */
+
+table
+{
+	margin-top: 1pc;
+	border: 2px solid #6495ed; /* cornflower blue */
+
+	-moz-border-radius:    8px 8px 0px 0px;
+	-webkit-border-radius: 8px 8px 0px 0px;
+	border-radius:         8px 8px 0px 0px;
+}
+
+th, td
+{
+	border: 0;
+}
+
+th
+{
+	background-color: #6495ed; /* cornflower blue */
+	color: white;
+}
+
+tbody tr:nth-child(odd)
+{
+	background-color: #add8e6; /* light blue */
+}
+
+tbody tr:nth-child(even)
+{
+	background-color: #b0e0e6; /* powder blue */
+}
+
+tbody tr:hover
+{
+	background-color: #87cefa; /* light sky blue */
+}
+
