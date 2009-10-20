@@ -1,0 +1,71 @@
+/* Book Common
+ *
+ * Copyright (C) Reece H. Dunn
+ *
+ * Released under the Creative Commons Attribution-Share Alike 2.0 UK: England
+ * & Wales Licence [http://creativecommons.org/licenses/by-sa/2.0/uk/].
+ *
+ * This stylesheet contains styling that is common to the book layouts.
+ * Specifically:
+ *   1.  all paragraphs are justified to the left and right margins;
+ *   2.  all paragraphs except the first are indented.
+ */
+
+@import url(minimalist.css);
+
+/* ============================== [ body ] ============================== */
+
+body
+{
+	margin: 0;
+	width: 30pc; /* approx. 60 characters per line */
+}
+
+.page
+{
+	border: 1px solid #EEE;
+	padding: 2pc;
+}
+
+/* ============================== [ heading ] ============================== */
+
+h2
+{
+	border: 0;
+}
+
+/* ============================== [ content ] ============================== */
+
+.date, h5
+{
+	font-size: 0.9pc;
+	font-weight: normal;
+	text-align: right;
+	color: #888;
+}
+
+.description
+{
+	text-align: justify;
+}
+
+/* ============================== [ paragraph ] ============================== */
+
+p
+{
+	text-indent: 3pc;
+	text-align: justify;
+	margin: 0pc;
+}
+
+p:first-of-type
+{
+	text-indent: 0pc;
+	margin-top: 1pc;
+}
+
+p:last-of-type
+{
+	margin-bottom: 1pc;
+}
+

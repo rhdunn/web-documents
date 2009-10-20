@@ -1,0 +1,32 @@
+/* Book 2
+ *
+ * Copyright (C) Reece H. Dunn
+ *
+ * Released under the Creative Commons Attribution-Share Alike 2.0 UK: England
+ * & Wales Licence [http://creativecommons.org/licenses/by-sa/2.0/uk/].
+ *
+ * The idea behind this stylesheet is to create a document that has a
+ * book-style layout. This is one of a series of layouts that have different
+ * heading and initial paragraph styling.
+ */
+
+@import url(book-common.css);
+
+/* ============================== [ heading ] ============================== */
+
+h2
+{
+	text-transform: uppercase;
+	text-align: center;
+	margin-top:    5pc;
+	margin-bottom: 5pc;
+}
+
+/* ============================== [ paragraph ] ============================== */
+
+p:first-of-type:first-letter
+{
+	font-size: 2pc;
+	color: navy;
+}
+
