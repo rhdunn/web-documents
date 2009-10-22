@@ -17,14 +17,7 @@
 
 body
 {
-	margin: 0;
-	width: 30pc; /* approx. 60 characters per line */
-}
-
-.page
-{
-	border: 1px solid #EEE;
-	padding: 2pc;
+	margin: 2pc;
 }
 
 /* ============================== [ heading ] ============================== */
