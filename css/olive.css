@@ -1,0 +1,126 @@
+/* Olive Theme
+ *
+ * Copyright (C) 2009 Reece H. Dunn [mailto:msclrhd@gmail.com]
+ *
+ * Released under the Creative Commons Attribution-Share Alike 2.0 UK: England
+ * & Wales Licence [http://creativecommons.org/licenses/by-sa/2.0/uk/].
+ *
+ * The idea behind this stylesheet is to create a blue-coloured table.
+ */
+
+@import 'minimalist.css';
+
+body
+{
+	background-color: black;
+	margin: 0;
+}
+
+div.page
+{
+	position: relative;
+	width: 80%;
+	left: 10%;
+
+	background-color: #BCEE68; /* darkolivegreen2 */
+
+	-webkit-border-radius: 1em;
+	-moz-border-radius: 1em;
+	border-radius: 1em;
+}
+
+.content
+{
+	margin: 0.5em;
+}
+
+.right
+{
+	text-align: right;
+}
+
+.caption
+{
+	font-size: 90%;
+}
+
+.header
+{
+	background-color: #A2CD5A; /* darkolivegreen3 */
+	padding: 0.5em;
+}
+
+.footer
+{
+	background-color: #A2CD5A; /* darkolivegreen3 */
+	padding: 0.5em;
+
+	-webkit-border-bottom-left-radius: 1em;
+	-webkit-border-bottom-right-radius: 1em;
+
+	-moz-border-radius-bottomleft: 1em;
+	-moz-border-radius-bottomright: 1em;
+
+	border-bottom-left-radius: 1em;
+	border-bottom-right-radius: 1em;
+}
+
+ol.navigation
+{
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+ol.navigation > li
+{
+	display: inline;
+}
+
+.copyright
+{
+	text-align: right;
+}
+
+/* ============================== [ headings ] ============================== */
+
+h1, h2, h3, h4, h5, h6
+{
+	color: black;
+}
+
+h2, h3, h4, h5, h6
+{
+	margin-bottom: 0.5em;
+}
+
+h1
+{
+	margin: 0;
+	text-align: left;
+}
+
+h2
+{
+	border-bottom: 0;
+}
+
+/* ============================== [ tables ] ============================== */
+
+tbody tr:hover
+{
+	background-color: #CAFF70; /* darkolivegreen1 */
+}
+
+th
+{
+	background-color: #A2CD5A; /* darkolivegreen3 */
+	color: black;
+	border-bottom: 0;
+}
+
+td
+{
+	border-bottom: 0;
+}
+
