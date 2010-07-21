@@ -40,12 +40,6 @@ body > article, body > footer
 	padding: 0.5em;
 }
 
-body > article
-{
-	border-left:  solid 1px #E8E8E8;
-	border-right: solid 1px #E8E8E8;
-}
-
 /* ============================== [ hyperlinks ] ============================== */
 
 a
@@ -85,7 +79,6 @@ body > header > h1
 	text-align: left;
 	color: black;
 	margin-bottom: 0.25em;
-	height: 2em;
 }
 
 h2
