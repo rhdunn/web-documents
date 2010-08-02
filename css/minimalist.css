@@ -9,35 +9,103 @@
  * a document.
  */
 
-/* ============================== [ body ] ============================== */
-
-html
+header, footer, article, section
 {
-	background-color: white;
-	overflow: scroll;
+	display: block;
 }
+
+.success { font-weight: bold; color: green; }
+.failure, .exception, .error { font-weight: bold; color: #dd0000; } /* red */
+.high      { font-weight: bold; color: navy; }
+.warning   { font-weight: bold; color: #ff6600; } /* orange */
+
+/* language syntax: */
+
+.keyword { font-weight: bold; color: navy; }
+
+/* other: */
+
+.indent, pre
+{
+	border-left: solid #ccc 1px;
+	margin-left: 1em;
+	padding-left: 0.5em;
+}
+
+.targets
+{
+	border-left: solid #ccc 1px;
+	margin-left: 0.5em;
+	padding-left: 0.5em;
+}
+
+.expander { cursor: pointer; }
+
+form { margin: 0; }
+
+/* ============================== [ body ] ============================== */
 
 body
 {
+	background-color: white;
 	color: black;
+
 	font-size: 1pc;
-	margin: 0;
+
+	margin: 0.5em 1em;
+	overflow-y: scroll;
 }
 
 body, .serif { font-family: Cambria, Liberation Serif, Bitstream Vera Serif, Georgia, Times, Times New Roman, Serif; }
 .sans-serif  { font-family: Calibri, Liberation Sans, Arial, Sans; }
 .monospace   { font-family: Consolas, Liberation Mono, Courier New, Mono; }
 
-body > header, body > nav, body > article, body > footer
+header > h1
 {
-	margin: 0em auto;
-	width: 750px;
+	background-color: lightskyblue;
+	font-family: Liberation Serif, Times New Roman;
+	text-align: center;
+	padding: 0.25em;
+
+	-moz-border-radius: 0.25em 0.25em 0 0;
+	-webkit-border-radius: 0.25em 0.25em 0 0;
 }
 
-body > article, body > footer
+p { margin-top: 0; }
+
+ol, ul { margin-bottom: 1em; }
+dt { font-style: italic; }
+
+article
 {
-	background-color: white;
-	padding: 0.5em;
+	margin: 0.5em;
+}
+
+article.slide
+{
+	margin: 1em;
+	font-size: 2em;
+}
+
+article.slide li
+{
+	margin-bottom: 1em;
+}
+
+ol.toc
+{
+	margin: 0 0em 1em 1em;
+	padding: 1em 1em 1em 2em;
+	background-color: #cfc;
+	float: right;
+
+	-moz-border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+}
+
+ol.toc ol
+{
+	margin-bottom: 0;
 }
 
 /* ============================== [ hyperlinks ] ============================== */
@@ -54,9 +122,28 @@ a:hover
 	border-bottom: 2px solid #88F;
 }
 
+nav
+{
+	display: block;
+	padding: 0.5em 0 0.5em 0;
+	margin: 0 0 1em 0;
+	border-bottom: 1px solid #DDD;
+}
+
+nav > a, nav > span
+{
+	margin: 0.5pc 0.2em 0.5em 0.2em;
+}
+
+nav > span
+{
+	font-weight: bold;
+	color: blue;
+}
+
 /* ============================== [ headings ] ============================== */
 
-h1, h2, h3, h4, h5, h6, em, strong, code, i, b, th
+h1, h2, h3, h4, h5, h6, em, strong, code, i, b, th, dt
 {
 	color: navy;
 }
@@ -66,19 +153,7 @@ h1
 	font-size: 2pc;
 	text-align: center;
 	margin-top: 0;
-}
-
-body > header
-{
-	padding: 0em 0.5em 0em 0.5em;
-}
-
-body > header > h1
-{
-	font-family: Liberation Serif, Times New Roman;
-	text-align: left;
-	color: black;
-	margin-bottom: 0.25em;
+	margin-bottom: 0;
 }
 
 h2
