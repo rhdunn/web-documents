@@ -62,13 +62,9 @@ body, .serif { font-family: Cambria, Liberation Serif, Bitstream Vera Serif, Geo
 
 header > h1
 {
-	background-color: lightskyblue;
 	font-family: Liberation Serif, Times New Roman;
 	text-align: center;
 	padding: 0.25em;
-
-	-moz-border-radius: 0.25em 0.25em 0 0;
-	-webkit-border-radius: 0.25em 0.25em 0 0;
 }
 
 p { margin-top: 0; }
