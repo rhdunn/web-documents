@@ -21,7 +21,7 @@ body
 	font-family: Liberation Sans, Sans;
 }
 
-.serif, div.logo, table.info tr th, table.info tr.more, div.download, body > nav, div.nav, h1, h2, h3, h4, h5, h6
+.serif, div.logo, table.info tr th, table.info tr.more, div.more, div.download, body > nav, div.nav, h1, h2, h3, h4, h5, h6
 {
 	font-family: Liberation Serif, Serif;
 }
