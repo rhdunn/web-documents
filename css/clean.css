@@ -12,8 +12,18 @@
 
 body
 {
-	width: 950px;
+	width: 850px;
 	margin: 0 auto;
+}
+
+.sans,  body
+{
+	font-family: Liberation Sans, Sans;
+}
+
+.serif, div.logo, table.info tr th, table.info tr.more, div.download, body > nav, div.nav
+{
+	font-family: Liberation Serif, Serif;
 }
 
 body > div.header, body > header
@@ -29,7 +39,6 @@ body > div.header, body > header
 
 div.logo
 {
-	font-family: Liberation Serif, Times New Roman;
 	font-size: 2em;
 	font-weight: bold;
 	text-align: left;
