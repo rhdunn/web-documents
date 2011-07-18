@@ -90,10 +90,10 @@ article.slide li
 
 ol.toc
 {
-	margin: 0 0em 1em 1em;
+	margin: 0 auto;
 	padding: 1em 1em 1em 2em;
+	width: 50%;
 	background-color: #cfc;
-	float: right;
 
 	-moz-border-radius: 0.5em;
 	-webkit-border-radius: 0.5em;
