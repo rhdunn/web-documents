@@ -112,18 +112,33 @@ table.info tr:hover, table.content tr:hover
 	background-color: white;
 }
 
-table.info tr th
+table.info tr th, .subheader
 {
+	clear: right;
+	margin-bottom: 0.25em;
 	font-size: 1.5em;
 	color: blue;
 	border-bottom: solid 1px white;
 	padding-bottom: 0.5em;
+	padding-left: 0.5em;
 	font-variant: small-caps;
 }
 
 table.info tr td, table.content tr td
 {
 	border-bottom: 0;
+}
+
+table.info tr td p
+{
+	padding-right: 0.5em;
+	padding-left: 0.5em;
+}
+
+table.info tr td.middle
+{
+	border-left: 1px solid #DDD;
+	border-right: 1px solid #DDD;
 }
 
 table.info li
@@ -134,6 +149,7 @@ table.info li
 table.info tr.more td div, div.more
 {
 	text-align: right;
+	padding-right: 0.5em;
 }
 
 table.info tr.more td div a, div.more a
@@ -151,7 +167,8 @@ table.content td > div
 
 div.download
 {
-	text-align: right;
+	margin-top: 0.5em;
+	float: right;
 }
 
 div.download > a
