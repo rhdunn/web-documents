@@ -102,57 +102,49 @@ a:hover
 	border-bottom: solid 2px navy;
 }
 
-table.info
+ul.columns3
 {
-	margin-top: 1em;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
 }
 
-table.info tr:hover, table.content tr:hover
+ul.columns3 li
 {
-	background-color: white;
+	margin: 0 0 1em 0;
+	padding: 0;
+	float: left;
+	width: 31%;
 }
 
-table.info tr th, .subheader
+ul.columns3 li p
 {
-	clear: right;
-	margin-bottom: 0.25em;
-	font-size: 1.5em;
-	color: blue;
-	border-bottom: solid 1px white;
-	padding-bottom: 0.5em;
-	padding-left: 0.5em;
-	font-variant: small-caps;
+	padding: 0.5em;
 }
 
-table.info tr td, table.content tr td
-{
-	border-bottom: 0;
-}
-
-table.info tr td p
-{
-	padding-right: 0.5em;
-	padding-left: 0.5em;
-}
-
-table.info tr td.middle
+ul.columns3 li:nth-child(2) p
 {
 	border-left: 1px solid #DDD;
 	border-right: 1px solid #DDD;
 }
 
-table.info li
+ul.columns3 h4
 {
-	margin-bottom: 0.25em;
+	margin-bottom: 0.5em;
+	margin-top: 0;
+	padding-left: 0.5em;
+	font-size: 1.5em;
+	color: blue;
+	font-variant: small-caps;
 }
 
-table.info tr.more td div, div.more
+div.more
 {
 	text-align: right;
 	padding-right: 0.5em;
 }
 
-table.info tr.more td div a, div.more a
+div.more a
 {
 	color: navy;
 	font-weight: bold;
