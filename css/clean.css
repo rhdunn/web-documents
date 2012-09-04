@@ -14,6 +14,12 @@ body
 {
 	width: 850px;
 	margin: 0 auto;
+	font-size: 14px;
+}
+
+code, pre
+{
+	font-size: 0.9em;
 }
 
 .sans,  body
