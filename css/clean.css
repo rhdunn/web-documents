@@ -28,9 +28,7 @@ body
 
 body > div.header, body > header
 {
-	margin-top: 0.5em;
 	padding: 0em 0.2em 0em 0.2em;
-	border-radius: 0.5em 0.5em 0 0;
 	background-color: #0022AA;
 	color: white;
 
