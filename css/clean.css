@@ -59,6 +59,11 @@ body > nav > span, div.nav > span
 	color: #008800;
 }
 
+body > div.article
+{
+	margin: 0.75em;
+}
+
 body > div.footer, body > footer
 {
 	background: #FFF; /* fallback */
