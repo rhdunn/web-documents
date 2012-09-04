@@ -40,7 +40,7 @@ div.logo
 	font-size: 2em;
 	font-weight: bold;
 	text-align: left;
-	padding: 0.2em 0.25em 0.2em 0.25em;
+	padding: 0.2em 0.25em 0.5em 0.25em;
 }
 
 body > nav, div.nav
