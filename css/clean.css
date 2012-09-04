@@ -72,14 +72,10 @@ body > div.article
 
 body > div.footer, body > footer
 {
-	background: #FFF; /* fallback */
-	background: -moz-linear-gradient(top, #F0F0F8 0%, #FFFFFF 20%); /* firefox */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #F0F0F8), color-stop(20%, #FFFFFF)); /* webkit */
-	background: -o-linear-gradient(top, #F0F0F8 0%, #FFFFFF 20%); /* opera */
-
-	margin-top: 0.5em;
-	padding: 2em 0.5em 0.5em 0.5em;
+	border-top: 2px solid #CCC;
+	padding-top: 1em;
 	clear: both;
+	font-size: 0.9em;
 }
 
 table
