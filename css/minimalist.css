@@ -94,9 +94,6 @@ ol.toc
 	padding: 1em 1em 1em 2em;
 	width: 50%;
 	background-color: #cfc;
-
-	-moz-border-radius: 0.5em;
-	-webkit-border-radius: 0.5em;
 }
 
 ol.toc ol
