@@ -92,8 +92,9 @@ ol.toc
 {
 	margin: 0 auto;
 	padding: 1em 1em 1em 2em;
-	width: 50%;
+	width: 25%;
 	background-color: #cfc;
+	float: right;
 }
 
 ol.toc ol
