@@ -205,21 +205,11 @@ div.download > a:hover
 	background-color: #0088EE;
 }
 
-div.section
-{
-	margin-left: 1em;
-}
-
 div.section > h1
 {
 	text-align: left;
 	font-size: 1.25em;
 	border-bottom: 1px solid #EEE;
-}
-
-div.section > div.inner
-{
-	margin-left: 1em;
 }
 
 a[property="dc:title"]
