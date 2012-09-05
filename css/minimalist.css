@@ -88,7 +88,7 @@ article.slide li
 	margin-bottom: 1em;
 }
 
-ol.toc, .sidepane
+ol.toc
 {
 	padding: 1em 1em 1em 2em;
 	width: 150px;

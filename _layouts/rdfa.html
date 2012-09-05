@@ -61,7 +61,15 @@
 	{% endif %}
 {% endfor %}</div>{% endif %}
 
+<div class="sidepane">
+{% if page.sidebar %}<ol>{% for ref in page.sidebar %}
+	<li><a href="{{ ref.url }}">{{ ref.title }}</a></li>
+{% endfor %}</ol>{% endif %}
+</div>
+
+<div class="article">
 {{content}}
+</div>
 
 <div class="footer">
 

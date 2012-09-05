@@ -74,20 +74,31 @@ body > div.article
 	border-right: 1px solid #eee;
 }
 
-ol.toc, .sidepane
+div.sidepane
 {
 	padding: 0 0.25em 0.5em 0.5em;
 	font-size: 0.9em;
-	background-color: white;
+	width: 150px;
+	float: right;
 }
 
-ol.toc li
+div.sidepane > ol
+{
+	padding: 0 0.25em 0.5em 0.5em;
+}
+
+ol.toc ol, div.sidepane ol
+{
+	margin-bottom: 0;
+}
+
+ol.toc li, div.sidepane ol li
 {
 	margin: 0.75em;
 	list-style: none;
 }
 
-ol.toc li:first-child
+ol.toc li:first-child, div.sidepane ol li:first-child
 {
 	margin-top: 0;
 	list-style: none;
