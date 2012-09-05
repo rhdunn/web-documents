@@ -50,6 +50,17 @@
 </div>
 </div>
 
+{% if page.nav %}<div class="nav">{% for ref in page.nav %}
+	{% if forloop.index0 != 0 %}
+		&raquo;
+	{% endif %}
+	{% if ref.url == nil %}
+		<span>{{ ref.title }}</span>
+	{% else %}
+		<a href="{{ ref.url }}">{{ ref.title }}</a>
+	{% endif %}
+{% endfor %}</div>{% endif %}
+
 {{content}}
 
 <div class="footer">
