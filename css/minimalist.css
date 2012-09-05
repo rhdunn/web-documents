@@ -88,11 +88,10 @@ article.slide li
 	margin-bottom: 1em;
 }
 
-ol.toc
+ol.toc, .sidepane
 {
-	margin: 0 auto;
 	padding: 1em 1em 1em 2em;
-	width: 25%;
+	width: 150px;
 	background-color: #cfc;
 	float: right;
 }
