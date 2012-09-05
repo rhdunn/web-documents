@@ -12,10 +12,7 @@ table
 {
 	margin-top: 1pc;
 	border: 2px solid #6495ed; /* cornflower blue */
-
-	-moz-border-radius:    8px 8px 0px 0px;
-	-webkit-border-radius: 8px 8px 0px 0px;
-	border-radius:         8px 8px 0px 0px;
+	border-radius: 8px 8px 0px 0px;
 }
 
 th, td
