@@ -51,7 +51,7 @@ div.logo
 
 body > nav, div.nav
 {
-	background: #E8E8EF;
+	border-bottom: 1px solid #f8f8f8;
 	padding: 0.5em;
 	margin-bottom: 0.5em;
 }
