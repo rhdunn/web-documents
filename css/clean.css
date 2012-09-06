@@ -64,7 +64,7 @@ body > nav > span, div.nav > span
 
 body > div.article
 {
-	margin: 0.5em;
+	margin: 0.25em 0.5em 0.5em 0.5em;
 	padding: 0 0.5em;
 	float: left;
 	width: 660px;
