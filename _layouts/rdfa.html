@@ -29,6 +29,10 @@
 
 <link rel="stylesheet" type="text/css" title="Clean" href="/web-documents/css/clean.css"/>
 
+{% for feed in page.feed %}
+<link rel="alternate" type="application/{{ feed.type }}+xml" title="{{ feed.title }}" href="{{ site.url }}/{{ feed.url }}"/>
+{% endfor %}
+
 {% if site.devmode == false %}
 <!-- google analytics -->
 <script type="text/javascript">
@@ -47,10 +51,7 @@
 <body>
 
 <div class="header">
-<div class="logo">
-<div style="font-size: 1.20em;">Dive Into</div>
-<div style="font-size: 0.75em;">Programming</div>
-</div>
+{% include logo.html %}
 </div>
 
 {% if page.nav %}<div class="nav">{% for ref in page.nav %}
