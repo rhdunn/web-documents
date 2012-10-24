@@ -34,7 +34,7 @@ body
 div.logo,
 table.info tr th,
 table.info tr.more, div.more,
-div.download,
+div.button,
 body > nav, div.nav,
 h1, h2, h3, h4, h5, h6
 {
@@ -150,6 +150,13 @@ h2
 	border-bottom: 0;
 }
 
+h3.subheader
+{
+	margin-top: 0;
+	color: blue;
+	font-variant: small-caps;
+}
+
 /* screenshot images */
 
 img.screenshot
@@ -174,15 +181,15 @@ img.screenshot
 	}
 }
 
-/* download button */
+/* button */
 
-div.download
+div.button
 {
 	margin: 0.5em 0.15em;
 	float: right;
 }
 
-div.download > a
+div.button > a
 {
 	padding: 0.5em;
 	border-radius: 0.25em;
@@ -193,7 +200,7 @@ div.download > a
 	font-weight: bold;
 }
 
-div.download > a:hover
+div.button > a:hover
 {
 	background-color: #0088EE;
 }
