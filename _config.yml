@@ -1,2 +1,4 @@
+name: Dive Into Programming
 exclude: [Makefile, README]
 devmode: false
+google_checkout_merchant_id: 726864842260241

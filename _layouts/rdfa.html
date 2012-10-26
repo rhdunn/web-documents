@@ -15,12 +15,12 @@
 	xmlns:doap="http://usefulinc.com/ns/doap#"
 >
 <head>
-<title property="dc:title">{{page.title}}</title>
+<title property="dc:title">{{page.title}} &#x2014; {{ site.name }}</title>
 
 <meta http-equiv="Content-Language" content="en"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-<meta name="title" content="{{page.title}}"/>
+<meta name="title" content="{{page.title}} &#x2014; {{ site.name }}"/>
 <meta name="description" content="{{page.description}}"/>
 <meta name="keywords" content="{{page.keywords}}"/>
 <meta name="robots" content="all"/>
@@ -34,7 +34,7 @@
 {% endfor %}
 
 {% if site.devmode == false %}
-<!-- google analytics -->
+<!-- Begin Google Analytics -->
 <script type="text/javascript">
 	var _gaq = _gaq || [];
 	_gaq.push(['_setAccount', 'UA-34092118-1']);
@@ -45,6 +45,7 @@
 		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	})();
 </script>
+<!-- End Google Analytics -->
 {% endif %}
 
 </head>
@@ -56,7 +57,7 @@
 
 {% if page.nav %}<div class="nav">{% for ref in page.nav %}
 	{% if forloop.index0 != 0 %}
-		&raquo;
+		&#xBB;
 	{% endif %}
 	{% if ref.url == nil %}
 		<span>{{ ref.title }}</span>
@@ -66,9 +67,54 @@
 {% endfor %}</div>{% endif %}
 
 <div class="sidepane">
-{% if page.sidebar %}<ol>{% for ref in page.sidebar %}
+
+<!-- Begin Google Support Button -->
+<script type="text/javascript">
+function validate_amount(amount)
+{
+	if (amount.value.match(/^[0-9]+(\.([0-9]+))?$/))
+		return true;
+
+	alert('You must enter a valid support amount.');
+	amount.focus();
+	return false;
+}
+</script>
+<form method="post"
+      action="https://checkout.google.com/api/checkout/v2/checkoutForm/Merchant/{{ site.google_checkout_merchant_id }}"
+      onsubmit="return validate_amount(this.item_price_1);">
+<input name="item_name_1" type="hidden" value="Support reecedunn.co.uk."/>
+<input name="item_description_1" type="hidden" value="Support this blog and Cainteoir Text-to-Speech."/>
+<input name="item_quantity_1" type="hidden" value="1"/>
+<input name="item_is_modifiable_1" type="hidden" value="true"/>
+<input name="item_currency_1" type="hidden" value="GBP"/>
+<input name="item_min_price_1" type="hidden" value="5.0"/>
+<input name="item_max_price_1" type="hidden" value="25000.0"/>
+<input name="_charset_" type="hidden" value="utf-8"/>
+
+<h3 class="subheader">Support This Site</h3>
+<div>£ <input name="item_price_1" size="12" placeholder="Enter Amount"/></div>
+<input alt="Support via Google Checkout" src="https://checkout.google.com/buttons/support.gif?merchant_id={{ site.google_checkout_merchant_id }}&amp;w=130&amp;h=50&amp;style=white&amp;variant=text" type="image"/>
+<div style="border-top: 1px solid #eee; margin-bottom: 1em;"></div>
+</form>
+<!-- End Google Support Button -->
+
+{% if page.sidebar_buttons %}
+{% for ref in page.sidebar_buttons %}
+<div class="button"><a href="{{ ref.url }}">{{ ref.title }}</a></div>
+{% endfor %}
+
+<div style="clear: both; margin-bottom: 1em;"></div>
+{% endif %}
+
+{% if page.sidebar %}
+<ol>
+{% for ref in page.sidebar %}
 	<li><a href="{{ ref.url }}">{{ ref.title }}</a></li>
-{% endfor %}</ol>{% endif %}
+{% endfor %}
+</ol>
+{% endif %}
+
 </div>
 
 <div class="article">
