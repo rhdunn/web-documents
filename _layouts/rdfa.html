@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
 <!--
 	Copyright (C) 2009-2012 Reece H. Dunn [mailto:msclrhd@gmail.com]
 
 	Released under the Creative Commons Attribution-Share Alike 2.0 UK: England
 	& Wales Licence [http://creativecommons.org/licenses/by-sa/2.0/uk/].
 -->
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
 <html xml:lang="en"
 	xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -13,14 +13,13 @@
 	xmlns:foaf="http://xmlns.com/foaf/0.1/"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 	xmlns:doap="http://usefulinc.com/ns/doap#"
+	xmlns:s="http://schema.org/"
 >
 <head>
 <title property="dc:title">{{page.title}} &#x2014; {{ site.name }}</title>
 
-<meta http-equiv="Content-Language" content="en"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-<meta name="title" content="{{page.title}} &#x2014; {{ site.name }}"/>
 <meta name="description" content="{{page.description}}"/>
 <meta name="keywords" content="{{page.keywords}}"/>
 <meta name="robots" content="all"/>
@@ -49,13 +48,13 @@
 {% endif %}
 
 </head>
-<body>
+<body typeof="s:WebPage">
 
 <div class="header">
 {% include logo.html %}
 </div>
 
-{% if page.nav %}<div class="nav">{% for ref in page.nav %}
+{% if page.nav %}<div class="nav" property="s:breadcrumb">{% for ref in page.nav %}
 	{% if forloop.index0 != 0 %}
 		&#xBB;
 	{% endif %}
