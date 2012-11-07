@@ -101,7 +101,7 @@ div.sidepane ol li:first-child
 	list-style: none;
 }
 
-@media screen and (min-width: 850px)
+@media screen and (min-width: 840px)
 {
 	div.sidepane
 	{
@@ -166,7 +166,7 @@ img.screenshot
 	width: auto;
 }
 
-@media screen and (min-width: 800px)
+@media screen and (min-width: 790px)
 {
 	img.screenshot
 	{
@@ -229,7 +229,7 @@ ul.columns3 h4
 	font-variant: small-caps;
 }
 
-@media screen and (min-width: 800px)
+@media screen and (min-width: 790px)
 {
 	ul.columns3 li
 	{
