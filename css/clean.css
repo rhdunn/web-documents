@@ -62,17 +62,36 @@ div.logo
 
 /* navigation - top breadcrumb bar */
 
-body > nav, div.nav
+body > nav, div.nav, ol.nav
 {
 	border-bottom: 1px solid #eee;
 	padding: 0.5em;
+	margin-top: 0;
 	margin-bottom: 0.5em;
 }
 
-body > nav > span, div.nav > span
+body > nav > span, div.nav > span, ol.nav > li > span
 {
 	font-weight: bold;
 	color: #008800;
+}
+
+ol.nav > li
+{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: inline;
+}
+
+ol.nav > li:before
+{
+	content: '\20 \20 \20 \BB \20';
+}
+
+ol.nav > li:first-child:before
+{
+	content: ' ';
 }
 
 /* navigation - sidepane */
