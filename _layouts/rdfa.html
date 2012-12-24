@@ -14,6 +14,7 @@
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 	xmlns:doap="http://usefulinc.com/ns/doap#"
 	xmlns:s="http://schema.org/"
+	xmlns:v="http://rdf.data-vocabulary.org/#"
 >
 <head>
 <title property="dc:title">{{page.title}} &#x2014; {{ site.name }}</title>
@@ -54,16 +55,13 @@
 {% include logo.html %}
 </div>
 
-{% if page.nav %}<div class="nav" property="s:breadcrumb">{% for ref in page.nav %}
-	{% if forloop.index0 != 0 %}
-		&#xBB;
-	{% endif %}
+{% if page.nav %}<ol class="nav" property="s:breadcrumb">{% for ref in page.nav %}
 	{% if ref.url == nil %}
-		<span>{{ ref.title }}</span>
+		<li typeof="v:Breadcrumb" title="{{ ref.title }}"><span property="v:title">{{ ref.title }}</span></li>
 	{% else %}
-		<a href="{{ ref.url }}">{{ ref.title }}</a>
+		<li typeof="v:Breadcrumb" title="{{ ref.title }}"><a rel="v:url" property="v:title" href="{{ ref.url }}">{{ ref.title }}</a></li>
 	{% endif %}
-{% endfor %}</div>{% endif %}
+{% endfor %}</ol>{% endif %}
 
 <div class="sidepane">
 
@@ -82,6 +80,7 @@ function validate_amount(amount)
 <form method="post"
       action="https://checkout.google.com/api/checkout/v2/checkoutForm/Merchant/{{ site.google_checkout_merchant_id }}"
       onsubmit="return validate_amount(this.item_price_1);">
+<div>
 <input name="item_name_1" type="hidden" value="Support reecedunn.co.uk."/>
 <input name="item_description_1" type="hidden" value="Support this blog and Cainteoir Text-to-Speech."/>
 <input name="item_quantity_1" type="hidden" value="1"/>
@@ -90,10 +89,11 @@ function validate_amount(amount)
 <input name="item_min_price_1" type="hidden" value="5.0"/>
 <input name="item_max_price_1" type="hidden" value="25000.0"/>
 <input name="_charset_" type="hidden" value="utf-8"/>
+</div>
 
 <h3 class="subheader">Support This Site</h3>
-<div>£ <input name="item_price_1" size="12" placeholder="Enter Amount"/></div>
-<input alt="Support via Google Checkout" src="https://checkout.google.com/buttons/support.gif?merchant_id={{ site.google_checkout_merchant_id }}&amp;w=130&amp;h=50&amp;style=white&amp;variant=text" type="image"/>
+<div>£ <input name="item_price_1" size="12"/></div>
+<div><input alt="Support via Google Checkout" src="https://checkout.google.com/buttons/support.gif?merchant_id={{ site.google_checkout_merchant_id }}&amp;w=130&amp;h=50&amp;style=white&amp;variant=text" type="image"/></div>
 <div style="border-top: 1px solid #eee; margin-bottom: 1em;"></div>
 </form>
 <!-- End Google Support Button -->
@@ -113,6 +113,8 @@ function validate_amount(amount)
 {% endfor %}
 </ol>
 {% endif %}
+
+<a href="https://play.google.com/store/apps/details?id=com.reecedunn.espeak" style="border: 0;"><img src="/images/espeak-for-android.png" title="eSpeak for Android" width="120"/></a>
 
 </div>
 
