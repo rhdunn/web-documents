@@ -15,11 +15,11 @@ body
 	margin: 0 auto;
 }
 
-@media screen and (min-width: 870px)
+@media screen and (min-width: 800px)
 {
 	body
 	{
-		width: 850px;
+		width: 800px;
 	}
 }
 
@@ -120,18 +120,18 @@ div.sidepane ol li:first-child
 	list-style: none;
 }
 
-@media screen and (min-width: 840px)
+@media screen and (min-width: 800px)
 {
 	div.sidepane
 	{
 		float: right;
-		width: 150px;
+		width: 140px;
 	}
 
 	body > div.article
 	{
 		float: left;
-		width: 650px;
+		width: 630px;
 	}
 }
 
