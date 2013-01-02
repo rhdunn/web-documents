@@ -136,12 +136,14 @@ nav > span
 
 /* ============================== [ headings ] ============================== */
 
-h1, h2, h3, h4, h5, h6, em, strong, code, i, b, th, dt
+h1, h2, h3, h4, h5, h6, em, strong, code, i, b, th, dt,
+div.title /* doxygen */
 {
 	color: navy;
 }
 
-h1
+h1,
+div.title /* doxygen */
 {
 	font-size: 2pc;
 	text-align: center;
@@ -186,3 +188,9 @@ th, td
 	padding: 2px;
 }
 
+/* doxygen documentation */
+
+div.title
+{
+	font-weight: bold;
+}

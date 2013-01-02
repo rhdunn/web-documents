@@ -36,14 +36,20 @@ table.info tr th,
 table.info tr.more, div.more,
 div.button,
 body > nav, div.nav,
-h1, h2, h3, h4, h5, h6
+h1, h2, h3, h4, h5, h6,
+div.title /* doxygen */
 {
 	font-family: "Liberation Serif", serif;
 }
 
+h2.groupheader /* doxygen */
+{
+	font-family: "Liberation Sans", sans-serif;
+}
+
 /* header */
 
-body > div.header, body > header
+body > div.banner, body > header
 {
 	padding: 0em 0.2em 0em 0.2em;
 	background-color: #0022AA;
@@ -62,7 +68,8 @@ div.logo
 
 /* navigation - top breadcrumb bar */
 
-body > nav, div.nav, ol.nav
+body > nav, div.nav, ol.nav,
+div.navpath > ul /* doxygen */
 {
 	border-bottom: 1px solid #eee;
 	padding: 0.5em;
@@ -76,7 +83,8 @@ body > nav > span, div.nav > span, ol.nav > li > span
 	color: #008800;
 }
 
-ol.nav > li
+ol.nav > li,
+div.navpath li /* doxygen */
 {
 	margin: 0;
 	padding: 0;
@@ -84,12 +92,14 @@ ol.nav > li
 	display: inline;
 }
 
-ol.nav > li:before
+ol.nav > li:before,
+div.navpath > ul > li:before /* doxygen */
 {
 	content: '\20 \20 \20 \BB \20';
 }
 
-ol.nav > li:first-child:before
+ol.nav > li:first-child:before,
+div.navpath > ul > li:first-child:before /* doxygen */
 {
 	content: ' ';
 }
@@ -102,19 +112,20 @@ div.sidepane
 	font-size: 0.9em;
 }
 
-div.sidepane > ol
+div.sidepane ol,
+div.sidepane ul
 {
 	padding: 0;
 	margin: 0;
 }
 
-div.sidepane ol li
+div.sidepane li
 {
 	margin: 0.75em 0.75em 0.75em 0.25em;
 	list-style: none;
 }
 
-div.sidepane ol li:first-child
+div.sidepane li:first-child
 {
 	margin-top: 0;
 	list-style: none;
@@ -154,7 +165,8 @@ body > div.footer, body > footer
 
 /* headings */
 
-h1
+h1,
+div.title /* doxygen */
 {
 	text-align: left;
 	font-size: 1.5em;
@@ -324,4 +336,108 @@ table
 code, pre
 {
 	font-size: 0.9em;
+}
+
+/* doxygen documentation */
+
+div.header, div#nav-path
+{
+	clear: both;
+}
+
+.tablist a
+{
+	border: 0;
+}
+
+div.contents table td
+{
+	border: 0;
+}
+
+hr
+{
+	border: 0;
+	border-top: 1px solid #ccc;
+}
+
+.ingroups,
+div.summary
+{
+	float: right;
+	font-size: 0.75em;
+}
+
+div.directory
+{
+	margin: 10px 0px;
+	border-top: 1px solid #A8B8D9;
+}
+
+.directory td
+{
+        margin: 0;
+        padding: 0;
+}
+
+.directory td.entry
+{
+        white-space: nowrap;
+}
+
+.directory img
+{
+	vertical-align: -30%;
+}
+
+.directory .levels
+{
+	white-space: nowrap;
+	text-align: right;
+	font-size: 9pt;
+}
+
+.directory .levels span
+{
+	cursor: pointer;
+	padding-left: 2px;
+	padding-right: 2px;
+	color: #3D578C;
+}
+
+.memberdecls,
+.memberdecls td
+{
+	margin: 0;
+	padding: 0;
+}
+
+.fragment
+{
+	border: 1px solid #ccc;
+	margin: 0.25em;
+	padding: 0.25em;
+}
+
+.memproto, .memItemLeft, .memItemRight, .fragment
+{
+	font-family: "Liberation Mono", monospace;
+	font-size: 0.85em;
+	white-space: nowrap;
+	color: navy;
+}
+
+.memItemLeft
+{
+	text-align: right;
+}
+
+.memdoc
+{
+	margin-left: 2em;
+}
+
+table.fieldtable tr td
+{
+	border-top: 1px solid #eee;
 }
