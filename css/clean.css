@@ -318,7 +318,8 @@ table
 	border-spacing: 0;
 }
 
-.inprogress, .success, .na, .failure
+.inprogress, .success, .na, .failure,
+.w3c-ed, .w3c-wd, .w3c-lc, .w3c-cr, .w3c-pr, .w3c-rec
 {
 	font-weight: bold;
 	text-align: center;
@@ -329,7 +330,14 @@ table
 .na         { background-color: #e0eeee; color: black; }
 .inprogress { background-color: #ffe544; color: black; }
 .success    { background-color: #caff70; color: black; }
-.failure    { background-color: #ff6020; color: black; }
+.failure    { background-color: #ff2020; color: white; }
+
+.w3c-ed     { background-color: #ff0000; color: white; } /* Editor Draft */
+.w3c-wd     { background-color: #ff2020; color: white; } /* Working Draft */
+.w3c-lc     { background-color: #ee4030; color: black; } /* Last Call */
+.w3c-cr     { background-color: #ddaa40; color: black; } /* Candidate Recommendation */
+.w3c-pr     { background-color: #bbbb50; color: black; } /* Proposed Recommendation */
+.w3c-rec    { background-color: #77ff60; color: black; } /* Recommendation */
 
 /* misc. elements */
 
