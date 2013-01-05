@@ -454,3 +454,8 @@ table.fieldtable tr td
 {
 	border-top: 1px solid #eee;
 }
+
+div.header, div.contents
+{
+	margin: 0.25pc;
+}
