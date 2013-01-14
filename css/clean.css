@@ -339,6 +339,55 @@ table
 .w3c-pr     { background-color: #bbbb50; color: black; } /* Proposed Recommendation */
 .w3c-rec    { background-color: #77ff60; color: black; } /* Recommendation */
 
+/* CSS-style specifications */
+
+table.propdef
+{
+	border-spacing: 0px;
+	padding: 0px 1em 0.5em;
+	margin: 1.2em 0px;
+	border-left: 0.5em solid rgb(140, 203, 242);
+	width: 100%;
+}
+
+table.propdef,
+table.propdef tr:hover
+{
+	background: rgb(221, 238, 255);
+}
+
+table.propdef th,
+table.propdef td
+{
+	padding: 0.5em;
+	border-bottom: 1px solid rgb(187, 215, 233);
+}
+
+table.propdef tr:first-child th,
+table.propdef tr:first-child td
+{
+	padding-top: 1em;
+}
+
+table.propdef tr:last-child th,
+table.propdef tr:last-child td
+{
+	padding-bottom: 1em;
+	border-bottom: 0px none;
+}
+
+table.propdef th
+{
+	font-style: italic;
+	font-weight: normal;
+	color: black;
+}
+
+table.propdef dfn
+{
+	font-weight: bold;
+}
+
 /* misc. elements */
 
 code, pre
