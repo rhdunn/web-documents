@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
-<html xml:lang="en"
-	xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:dct="http://purl.org/dc/terms/"
-	xmlns:foaf="http://xmlns.com/foaf/0.1/"
-	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-	xmlns:doap="http://usefulinc.com/ns/doap#"
-	xmlns:s="http://schema.org/"
-	xmlns:v="http://rdf.data-vocabulary.org/#"
->
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" prefix="dc: http://purl.org/dc/elements/1.1/ dct: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ xsd: http://www.w3.org/2001/XMLSchema# doap: http://usefulinc.com/ns/doap# s: http://schema.org/ v: http://rdf.data-vocabulary.org/#">
 <head>
 <title property="dc:title s:name">{{page.title}} &#x2014; {{ site.name }}</title>
 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta charset="utf-8"/>
 
-<meta name="description" property="dc:description s:description" content="{{page.description}}"/>
+<meta name="description" content="{{page.description}}"/>
 <meta name="keywords" content="{{page.keywords}}"/>
 <meta name="robots" content="all"/>
 
@@ -45,14 +36,15 @@
 </head>
 <body typeof="{% if page.typeof %}{{ page.typeof }}{% else %}s:WebPage{% endif %}">
 
-<div class="banner">
+<header>
 {% include logo.html %}
-</div>
+</header>
 
 {% if page.nav %}
 {% assign refnum = 1 %}
-<div><a rel="s:breadcrumbs" href="breadcrumb1"></a></div>
-<ol class="nav">
+<nav>
+<a rel="s:breadcrumbs" href="breadcrumb1"></a>
+<ol>
 {% for ref in page.nav %}
 	{% if ref.url == nil %}
 		<li id="breadcrumb{{ refnum }}" about="#breadcrumb{{ refnum }}" typeof="v:Breadcrumb" title="{{ ref.title }}"><span property="v:title">{{ ref.title }}</span></li>
@@ -62,9 +54,10 @@
 	{% endif %}
 {% endfor %}
 </ol>
+</nav>
 {% endif %}
 
-<div class="sidepane">
+<aside class="sidepane">
 
 <!-- Begin Google Support Button -->
 <script type="text/javascript">
@@ -108,31 +101,34 @@ function validate_amount(amount)
 {% endif %}
 
 {% if page.sidebar %}
-<ol>
+<nav>
+<ul>
 {% for ref in page.sidebar %}
 	<li><a href="{{ ref.url }}">{{ ref.title }}</a></li>
 {% endfor %}
-</ol>
+</ul>
+</nav>
 {% endif %}
 
 <a href="https://play.google.com/store/apps/details?id=com.reecedunn.espeak" style="border: 0;"><img src="/images/espeak-for-android.png" title="eSpeak for Android" alt="eSpeak for Android" width="120"/></a>
 
 <a href="http://info.flagcounter.com/xEUY" style="border: 0;"><img src="http://s06.flagcounter.com/count/xEUY/bg_FFFFFF/txt_000000/border_D9D9D9/columns_1/maxflags_10/viewers_0/labels_1/pageviews_0/flags_0/" alt="Flag Counter"/></a>
 
-</div>
+</aside>
 
-<div class="article">
+<article>
 {{content}}
 {% if page.author %}<p>&#x2014; <span property="dc:creator s:author">{{ page.author }}</span></p>{% endif %}
-</div>
+</article>
 
-<div class="footer">
+<footer>
 
 <p style="text-align: center;">
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/uk/" style="border: 0;"><img alt="Creative Commons License" src="http://i.creativecommons.org/l/by-sa/2.0/uk/88x31.png"/></a>
-<span resource="http://www.w3.org/TR/rdfa-syntax" rel="dct:conformsTo">
-<a href="http://validator.w3.org/check?uri=referer" style="border: 0;"><img src="http://www.w3.org/Icons/valid-xhtml-rdfa" alt="Valid XHTML + RDFa" height="31" width="88" /></a>
-</span>
+<a href="http://www.w3.org/html/logo/" style="border: 0;">
+<img src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" width="80" height="31" alt="HTML5 Powered with CSS3 / Styling, and Semantics" title="HTML5 Powered with CSS3 / Styling, and Semantics"/>
+</a>
+<img src="http://www.w3.org/Icons/SW/Buttons/sw-rdfa-green.png" alt="RDFa 1.1" height="15" width="80" style="padding-top: 8px; padding-bottom: 8px;" />
 <span>
 <a href="http://jigsaw.w3.org/css-validator/check/referer" style="border: 0;"><img src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" height="31" width="88" /></a>
 </span>
@@ -148,6 +144,6 @@ function validate_amount(amount)
 
 <p>This website is generated using the <a href="https://github.com/mojombo/jekyll">Jekyll</a> static site generator.</p>
 
-</div>
+</footer>
 </body>
 </html>
