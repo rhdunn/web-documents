@@ -115,25 +115,6 @@ a:hover
 	border-bottom: 2px solid #88F;
 }
 
-nav
-{
-	display: block;
-	padding: 0.5em 0 0.5em 0;
-	margin: 0 0 1em 0;
-	border-bottom: 1px solid #DDD;
-}
-
-nav > a, nav > span
-{
-	margin: 0.5pc 0.2em 0.5em 0.2em;
-}
-
-nav > span
-{
-	font-weight: bold;
-	color: blue;
-}
-
 /* ============================== [ headings ] ============================== */
 
 h1, h2, h3, h4, h5, h6, em, strong, code, i, b, th, dt,

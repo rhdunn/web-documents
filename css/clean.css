@@ -68,7 +68,9 @@ div.logo
 
 /* navigation - top breadcrumb bar */
 
-body > nav, div.nav, ol.nav,
+div.nav,
+ol.nav,
+nav > ol,
 div.navpath > ul /* doxygen */
 {
 	border-bottom: 1px solid #eee;
@@ -77,13 +79,17 @@ div.navpath > ul /* doxygen */
 	margin-bottom: 0.5em;
 }
 
-body > nav > span, div.nav > span, ol.nav > li > span
+body > nav > span,
+div.nav > span,
+ol.nav > li > span,
+nav > ol > li > span
 {
 	font-weight: bold;
 	color: #008800;
 }
 
 ol.nav > li,
+nav > ol > li,
 div.navpath li /* doxygen */
 {
 	margin: 0;
@@ -93,12 +99,14 @@ div.navpath li /* doxygen */
 }
 
 ol.nav > li:before,
+nav > ol > li:before,
 div.navpath > ul > li:before /* doxygen */
 {
 	content: '\20 \20 \20 \BB \20';
 }
 
 ol.nav > li:first-child:before,
+nav > ol > li:first-child:before,
 div.navpath > ul > li:first-child:before /* doxygen */
 {
 	content: ' ';
@@ -106,26 +114,26 @@ div.navpath > ul > li:first-child:before /* doxygen */
 
 /* navigation - sidepane */
 
-div.sidepane
+.sidepane
 {
 	padding: 0 0.25em;
 	font-size: 0.9em;
 }
 
-div.sidepane ol,
-div.sidepane ul
+.sidepane ol,
+.sidepane ul
 {
 	padding: 0;
 	margin: 0;
 }
 
-div.sidepane li
+.sidepane li
 {
 	margin: 0.75em 0.75em 0.75em 0.25em;
 	list-style: none;
 }
 
-div.sidepane li:first-child
+.sidepane li:first-child
 {
 	margin-top: 0;
 	list-style: none;
@@ -133,13 +141,14 @@ div.sidepane li:first-child
 
 @media screen and (min-width: 800px)
 {
-	div.sidepane
+	.sidepane
 	{
 		float: right;
 		width: 140px;
 	}
 
-	body > div.article
+	body > div.article,
+	body > article
 	{
 		float: left;
 		width: 630px;
@@ -148,14 +157,16 @@ div.sidepane li:first-child
 
 /* article - main content */
 
-body > div.article
+body > div.article,
+body > article
 {
 	margin: 0.25em 0.5em 0.5em 0.5em;
 }
 
 /* footer */
 
-body > div.footer, body > footer
+body > div.footer,
+body > footer
 {
 	border-top: 2px solid #eee;
 	padding: 0.5em;
