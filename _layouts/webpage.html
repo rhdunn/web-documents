@@ -118,7 +118,7 @@ function validate_amount(amount)
 
 <article>
 {{content}}
-{% if page.author %}<p>&#x2014; <span property="dc:creator s:author">{{ page.author }}</span></p>{% endif %}
+{% if page.author %}<p>&#x2014; <a rel="dc:creator s:author" href="{{ page.author.foaf }}">{{ page.author.name }}</a></p>{% endif %}
 </article>
 
 <footer>
