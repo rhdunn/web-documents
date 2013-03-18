@@ -18,6 +18,12 @@
 <link rel="alternate" type="application/{{ feed.type }}+xml" title="{{ feed.title }}" href="{{ site.url }}/{{ feed.url }}"/>
 {% endfor %}
 
+{% if page.link %}
+{% for item in page.link %}
+<link rel="{{ item.rel }}" href="{{ item.href }}"/>
+{% endfor %}
+{% endif %}
+
 {% if site.devmode == false %}
 <!-- Begin Google Analytics -->
 <script type="text/javascript">
