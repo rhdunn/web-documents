@@ -25,6 +25,7 @@ body
 
 /* fonts */
 
+body > nav, div.nav,
 .sans,  body
 {
 	font-family: "Liberation Sans", sans-serif;
@@ -35,7 +36,6 @@ div.logo,
 table.info tr th,
 table.info tr.more, div.more,
 div.button,
-body > nav, div.nav,
 h1, h2, h3, h4, h5, h6,
 div.title /* doxygen */
 {
@@ -73,7 +73,7 @@ ol.nav,
 nav > ol,
 div.navpath > ul /* doxygen */
 {
-	border-bottom: 1px solid #eee;
+	border-bottom: 1px solid #0022AA;
 	padding: 0.5em;
 	margin-top: 0;
 	margin-bottom: 0.5em;
