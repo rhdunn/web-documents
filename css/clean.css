@@ -26,6 +26,7 @@ body
 /* fonts */
 
 body > nav, div.nav,
+div.button,
 .sans,  body
 {
 	font-family: "Liberation Sans", sans-serif;
@@ -35,7 +36,6 @@ body > nav, div.nav,
 div.logo,
 table.info tr th,
 table.info tr.more, div.more,
-div.button,
 h1, h2, h3, h4, h5, h6,
 div.title /* doxygen */
 {
@@ -229,6 +229,7 @@ div.button
 {
 	margin: 0.5em 0.15em;
 	float: right;
+	font-size: 0.8em;
 }
 
 div.button > a
