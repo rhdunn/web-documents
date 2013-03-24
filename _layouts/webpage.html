@@ -81,8 +81,8 @@ function validate_amount(amount)
       action="https://checkout.google.com/api/checkout/v2/checkoutForm/Merchant/{{ site.google_checkout_merchant_id }}"
       onsubmit="return validate_amount(this.item_price_1);">
 <div>
-<input name="item_name_1" type="hidden" value="Support reecedunn.co.uk."/>
-<input name="item_description_1" type="hidden" value="Support this blog and Cainteoir Text-to-Speech."/>
+<input name="item_name_1" type="hidden" value="Support Cainteoir TTS."/>
+<input name="item_description_1" type="hidden" value="Support Cainteoir Text-to-Speech."/>
 <input name="item_quantity_1" type="hidden" value="1"/>
 <input name="item_is_modifiable_1" type="hidden" value="true"/>
 <input name="item_currency_1" type="hidden" value="GBP"/>
@@ -91,7 +91,7 @@ function validate_amount(amount)
 <input name="_charset_" type="hidden" value="utf-8"/>
 </div>
 
-<h3 class="subheader">Support This Site</h3>
+<h3 class="subheader" style="text-align: center;">Support Cainteoir Text-to-Speech</h3>
 <div>£ <input name="item_price_1" size="12"/></div>
 <div><input alt="Support via Google Checkout" src="https://checkout.google.com/buttons/support.gif?merchant_id={{ site.google_checkout_merchant_id }}&amp;w=130&amp;h=50&amp;style=white&amp;variant=text" type="image"/></div>
 <div style="border-top: 1px solid #eee; margin-bottom: 1em;"></div>
