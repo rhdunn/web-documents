@@ -23,6 +23,12 @@ body
 	}
 }
 
+blockquote.about
+{
+	margin-top: -1em;
+	font-style: italic;
+}
+
 /* fonts */
 
 body > nav, div.nav,
@@ -371,6 +377,13 @@ table.propdef th
 table.propdef dfn
 {
 	font-weight: bold;
+}
+
+table.info td > ul
+{
+	margin: 0;
+	padding-left: 0;
+	list-style: none;
 }
 
 /* misc. elements */
