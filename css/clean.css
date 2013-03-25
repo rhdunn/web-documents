@@ -261,6 +261,14 @@ div.button > a:hover
 
 /* 3-column layout */
 
+ul.columns2,
+ul.columns3
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
 .columns2 li,
 .columns3 li
 {
@@ -280,8 +288,8 @@ div.button > a:hover
 
 @media screen and (min-width: 790px)
 {
-	.columns2,
-	.columns3
+	ol.columns2,
+	ol.columns3
 	{
 		list-style-type: none;
 		margin: 0;
