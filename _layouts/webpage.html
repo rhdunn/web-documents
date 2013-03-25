@@ -63,6 +63,11 @@
 </nav>
 {% endif %}
 
+<article>
+{{content}}
+{% if page.author %}<p>&#x2014; <a rel="dc:creator s:author" href="{{ page.author.foaf }}">{{ page.author.name }}</a></p>{% endif %}
+</article>
+
 <aside class="sidepane">
 
 <!-- Begin Google Support Button -->
@@ -119,11 +124,6 @@ function validate_amount(amount)
 <a href="http://info.flagcounter.com/xEUY" style="border: 0;"><img src="http://s06.flagcounter.com/count/xEUY/bg_FFFFFF/txt_000000/border_D9D9D9/columns_1/maxflags_10/viewers_0/labels_1/pageviews_0/flags_0/" alt="Flag Counter"/></a>
 
 </aside>
-
-<article>
-{{content}}
-{% if page.author %}<p>&#x2014; <a rel="dc:creator s:author" href="{{ page.author.foaf }}">{{ page.author.name }}</a></p>{% endif %}
-</article>
 
 <footer>
 
