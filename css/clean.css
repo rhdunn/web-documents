@@ -261,23 +261,15 @@ div.button > a:hover
 
 /* 3-column layout */
 
-ul.columns2,
-ul.columns3
-{
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-}
-
-ul.columns2 li,
-ul.columns3 li
+.columns2 li,
+.columns3 li
 {
 	margin: 0 0 1em 0;
 	padding: 0;
 }
 
-ul.columns2 h4,
-ul.columns3 h4
+.columns2 h4,
+.columns3 h4
 {
 	margin-bottom: 0.5em;
 	margin-top: 0;
@@ -288,33 +280,41 @@ ul.columns3 h4
 
 @media screen and (min-width: 790px)
 {
-	ul.columns2 li
+	.columns2,
+	.columns3
+	{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.columns2 li
 	{
 		float: left;
 		width: 49%;
 	}
 
-	ul.columns3 li
+	.columns3 li
 	{
 		float: left;
 		width: 31%;
 	}
 
-	ul.columns3 li:nth-child(2) p
+	.columns3 li:nth-child(2) p
 	{
 		border-left:  1px solid #eee;
 		border-right: 1px solid #eee;
 	}
 
-	ul.columns2 li p,
-	ul.columns3 li p
+	.columns2 li p,
+	.columns3 li p
 	{
 		padding-left:  0.5em;
 		padding-right: 0.5em;
 	}
 
-	ul.columns2 h4,
-	ul.columns3 h4
+	.columns2 h4,
+	.columns3 h4
 	{
 		padding-left: 0.4em;
 	}
